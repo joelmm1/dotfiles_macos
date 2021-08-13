@@ -5,16 +5,18 @@
 # - clean: ['~']
 
 - link:
-    ~/.tmux.conf: tmux.conf
+    ~/php_cs_fixer: php_cs_fixer
     ~/.vim: vim
     ~/.vimrc: vimrc
+    ~/.zshrc: zshrc
+    ~/.gitignore_global: gitignore_global
 
-- create:
-    - ~/Downloads
-    - ~/.vim/undo-history
-    - ~/Work
-    - ~/Sites
-    - ~/Research
+# - create:
+#     - ~/Downloads
+#     - ~/.vim/undo-history
+#     - ~/Work
+#     - ~/Sites
+#     - ~/Research
 
 # - shell:
 #  - [git submodule update --init --recursive, Installing submodules]

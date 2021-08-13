@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/Users/phillipnzuli/.dotfiles'
+let g:netrw_dirhist_7='/Users/phillipnzuli/Sites/librarian/config'
+let g:netrw_dirhist_6='/Users/phillipnzuli/Sites/librarian'
+let g:netrw_dirhist_5='/Users/phillipnzuli/Sites/corpus'
+let g:netrw_dirhist_4='/Users/phillipnzuli/Documents/Code/vue/my-vue3-project/src'
+let g:netrw_dirhist_3='/Users/phillipnzuli/Documents/Code/vue/my-vue3-project'
+let g:netrw_dirhist_2='/Users/phillipnzuli/Documents/Code/vue/my-vue3-project/node_modules'
+let g:netrw_dirhist_1='/Users/phillipnzuli/Documents/Code/vue/my-vue3-project'
