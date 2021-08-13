@@ -10,6 +10,7 @@
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.gitignore_global: gitignore_global
+    ~/.gitconfig: gitconfig
 
 # - create:
 #     - ~/Downloads

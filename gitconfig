@@ -1,0 +1,9 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Phillip Mwaniki
+	email = 2037708+PhillipMwaniki@users.noreply.github.com
+[core]
+	excludesfile = /Users/phillipnzuli/.gitignore_global
+[init]
+	defaultBranch = master
