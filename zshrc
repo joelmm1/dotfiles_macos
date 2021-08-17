@@ -14,6 +14,12 @@ ZSH_THEME="robbyrussell"
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/ncurses/bin:$PATH
 
+# Syntax highlighting for man pages
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+# Use bat instead of cat
+alias cat=bat
+
 export PATH="$HOME/.symfony/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-15.0.1.jdk/Contents/Home

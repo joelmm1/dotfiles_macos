@@ -7,6 +7,7 @@
 - link:
     ~/php_cs_fixer: php_cs_fixer
     ~/.vim: vim
+    ~/.phil: phil
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.gitignore_global: gitignore_global
