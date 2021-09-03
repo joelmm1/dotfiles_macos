@@ -14,6 +14,7 @@ brew "dnsmasq"
 brew "docker-compose", link: false
 brew "erlang"
 brew "elixir"
+brew "exa"
 brew "gh"
 brew "glib"
 brew "gnupg"
