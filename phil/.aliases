@@ -1,5 +1,6 @@
 alias 'cc'='cd ~/Documents/Code/'
-alias ls='ls -lAFh'
+alias ls='exa -laFh --git'
+alias ll='exa -laFh --git'
 alias 'wk'='cd ~/Work'
 alias 'pf'='vendor/bin/phpunit --filter'
 alias 'pu'='vendor/bin/phpunit'
