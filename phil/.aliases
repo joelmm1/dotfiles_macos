@@ -26,6 +26,7 @@ alias cac="php artisan cache:clear"
 alias ca="php artisan config:cache"
 alias duc="du; ca"
 alias p="vendor/bin/phpunit"
+alias test="art config:clear; composer test"
 alias pf="p --filter"
 #Config Locations
 alias 'vim csconfig'="/Users/phillipnzuli/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer.conf"

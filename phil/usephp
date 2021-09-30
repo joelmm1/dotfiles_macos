@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo "Switching to PHP $1"
+valet stop
+valet use -vvv "php@$1"
+brew link --force "php@$1"
+valet start
+echo "Switched to PHP $1"
