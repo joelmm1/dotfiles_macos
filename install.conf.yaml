@@ -7,16 +7,21 @@
 - link:
     ~/php_cs_fixer: php_cs_fixer
     ~/.vim: vim
+    ~/.phil: phil
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.gitignore_global: gitignore_global
+    ~/.gitconfig: gitconfig
 
-# - create:
-#     - ~/Downloads
-#     - ~/.vim/undo-history
-#     - ~/Work
-#     - ~/Sites
-#     - ~/Research
+- create:
+    - ~/Downloads
+    - ~/.vim/undo-history
+    - ~/Work
+    - ~/Sites
+    - ~/Research
 
-# - shell:
-#  - [git submodule update --init --recursive, Installing submodules]
+- shell:
+    -
+        command: ./setup_homebrew.zsh
+        stdoout: true
+        stderr: true

@@ -14,6 +14,14 @@ ZSH_THEME="robbyrussell"
 export PATH=/usr/local/sbin:$PATH
 export PATH=/usr/local/opt/ncurses/bin:$PATH
 
+# Syntax highlighting for man pages
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
+export HOMEBREW_CASK_OPTS="--no-quarantine"
+
+# Use bat instead of cat
+alias cat=bat
+
 export PATH="$HOME/.symfony/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-15.0.1.jdk/Contents/Home
@@ -69,18 +77,6 @@ export LANG=en_US.UTF-8
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-
-#php
-#export PATH="/usr/local/opt/php@7.4/bin:$PATH"
-#export PATH="/usr/local/opt/php@7.4/sbin:$PATH"
-#export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

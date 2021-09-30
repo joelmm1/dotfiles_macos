@@ -1,0 +1,32 @@
+alias 'cc'='cd ~/Documents/Code/'
+alias ls='exa -laFh --git'
+alias ll='exa -laFh --git'
+alias 'wk'='cd ~/Work'
+alias 'pf'='vendor/bin/phpunit --filter'
+alias 'pu'='vendor/bin/phpunit'
+alias 'rustbook'='rustup docs --book'
+alias 'art'='php artisan'
+alias 'git search $filename'='git log --diff-filter=A --'
+alias 'gumaster'='git fetch upstream master; git rebase upstream/master'
+alias 'glog'='git log --graph --decorate --pretty=oneline --abbrev-commit'
+alias 'gr'='git restore'
+alias 'speed'='python /Users/pro/Development/speedtest.py'
+alias 'emulator'='~/Library/Android/sdk/emulator/emulator -avd Nexus_6P_API_30_R -netdelay none -netspeed full'
+alias zshconfig="vim ~/.zshrc"
+alias src="source ~/.zshrc"
+alias cx="clear"
+alias rr="reset"
+alias phpini="/usr/local/etc/php/7.4/php.ini"
+alias vhost="sudo vim httpd-vhosts.conf"
+alias sites="cd ~/Sites"
+
+#Larvel
+alias du="composer dump-autoload -o"
+alias cac="php artisan cache:clear"
+alias ca="php artisan config:cache"
+alias duc="du; ca"
+alias p="vendor/bin/phpunit"
+alias test="art config:clear; composer test"
+alias pf="p --filter"
+#Config Locations
+alias 'vim csconfig'="/Users/phillipnzuli/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer.conf"
