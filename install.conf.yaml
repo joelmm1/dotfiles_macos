@@ -5,13 +5,15 @@
 # - clean: ['~']
 
 - link:
-    ~/php_cs_fixer: php_cs_fixer
+    ~/.php_cs_fixer: php_cs_fixer
     ~/.vim: vim
     ~/.phil: phil
     ~/.vimrc: vimrc
     ~/.zshrc: zshrc
     ~/.gitignore_global: gitignore_global
     ~/.gitconfig: gitconfig
+    ~/.gitconfig_personal: gitconfig_personal
+    ~/.gitconfig_work: gitconfig_work
 
 - create:
     - ~/Downloads
@@ -20,8 +22,8 @@
     - ~/Sites
     - ~/Research
 
-- shell:
-    -
-        command: ./setup_homebrew.zsh
-        stdoout: true
-        stderr: true
+# - shell:
+#     -
+#         command: ./setup_homebrew.zsh
+#         stdoout: true
+#         stderr: true

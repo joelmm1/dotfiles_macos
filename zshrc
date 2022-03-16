@@ -2,10 +2,10 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/phillipnzuli/.oh-my-zsh"
+export ZSH="/Users/$USER/.oh-my-zsh"
 
 #Path to my custom .aliases and other scripts
-export PHIL="/Users/phillipnzuli/.phil"
+export PHIL="/Users/$USER/.phil"
 export PATH=$PHIL:$PATH
 
 ZSH_THEME="robbyrussell"
@@ -32,17 +32,17 @@ export PATH=~/.npm-global:$PATH
 export PATH=~/.composer/vendor/bin:$PATH
 export PATH=~/Library/Python/2.7/bin:$PATH
 export PATH=~/Development/elasticsearch-6.6.1/bin:$PATH
-export PATH=~/Development/glassfish5/bin:$PATH
-export PATH=~/Development/glassfish5/glassfish/bin:$PATH
-export PATH=~/opt/javafx-sdk-11.0.2/lib:$PATH
+export PATH=~/development/gh_2.1.0_macOS_amd64/bin:$PATH
 #android
-export ANDROID_HOME=/Users/phillipnzuli/Library/Android
+export PATH=$PATH:/users/Phillip/development/flutter/bin
+export ANDROID_HOME=/Users/$USER/Library/Android
 export ANDROID_SDK=$ANDROID_HOME/sdk
-export PATH="$ANDROID_SDK/platform-tools:$ANDROID_HOME:$ANDROID_SDK:$PATH"
+export PATH="$ANDROID_SDK/platform-tools:$ANDROID_HOME:$ANDROID_SDK:$ANDROID_SDK/tools/bin:$PATH"
 # alias simulator='open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app'
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # Add Redis.app binaries to path
+export PATH="/Users/$USER/development/redis-6.0.10/src:$PATH"
 
 # Add mongoDB.app binaries to path
 export PATH="/Applications/MongoDB.app/Contents/Resources/Vendor/mongodb/bin:$PATH"
@@ -50,8 +50,8 @@ export PATH="/Applications/MongoDB.app/Contents/Resources/Vendor/mongodb/bin:$PA
 PATH="/Applications/RabbitMQ.app/Contents/Resources/Vendor/rabbitmq/sbin:$PATH"
 #nvm
 export NVM_DIR="$HOME/.nvm"
-    [ -s "$(brew --prefix)/opt/nvm/nvm.sh" ] && . "$(brew --prefix)/opt/nvm/nvm.sh" # This loads nvm
-    [ -s "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" ] && . "$(brew --prefix)/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 plugins=(git laravel colored-man-pages zsh-autosuggestions zsh-syntax-highlighting)
 
@@ -80,3 +80,4 @@ export LANG=en_US.UTF-8
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="/usr/local/sbin:$PATH"

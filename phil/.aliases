@@ -11,7 +11,8 @@ alias 'gumaster'='git fetch upstream master; git rebase upstream/master'
 alias 'glog'='git log --graph --decorate --pretty=oneline --abbrev-commit'
 alias 'gr'='git restore'
 alias 'speed'='python /Users/pro/Development/speedtest.py'
-alias 'emulator'='~/Library/Android/sdk/emulator/emulator -avd Nexus_6P_API_30_R -netdelay none -netspeed full'
+alias 'emulator'='~/Library/Android/sdk/emulator/emulator -avd Pixel_4_API_30 -netdelay none -netspeed full'
+alias 'listemulator'='~/Library/Android/sdk/emulator/emulator -list-avds'
 alias zshconfig="vim ~/.zshrc"
 alias src="source ~/.zshrc"
 alias cx="clear"
@@ -19,6 +20,10 @@ alias rr="reset"
 alias phpini="/usr/local/etc/php/7.4/php.ini"
 alias vhost="sudo vim httpd-vhosts.conf"
 alias sites="cd ~/Sites"
+alias checkport="lsof -i -P | grep LISTEN | grep "
+
+#Redis
+alias credis="redis-cli FLUSHALL"
 
 #Larvel
 alias du="composer dump-autoload -o"
@@ -30,3 +35,96 @@ alias test="art config:clear; composer test"
 alias pf="p --filter"
 #Config Locations
 alias 'vim csconfig'="/Users/phillipnzuli/.composer/vendor/squizlabs/php_codesniffer/CodeSniffer.conf"
+
+#Whatagraph commands
+a='php artisan'
+alias acleanup='rm -rf bootstrap/cache/*.php && rm -f storage/logs/* && a clear-compiled && a route:clear && a view:clear && a config:cache && a cache:clear'
+alias rebuild='acleanup && composer install && a migrate && a outsource:in && a outsource:re && a outsource:di && a outsource:me && a migrate:initw --confirm'
+alias horizon-clear='a horizon:clear && a horizon:clear --queue=screenshot && a horizon:clear --queue=email && a horizon:clear --queue=image_cache && a horizon:clear --queue=instagram_stories && a horizon:clear --queue=segment && a horizon:clear --queue=prefetch_report && a horizon:clear --queue=generate_pdf'
+
+#Love
+alias love="/Applications/love.app/Contents/MacOS/love"
+
+#Whatagraph
+alias gc='git checkout'
+alias fetch='git fetch'
+alias pull='git pull'
+alias add='git add .'
+alias commit='git commit'
+alias push='git push'
+alias stash='git stash'
+alias status='git status'
+alias merge='git merge'
+alias drop='stash drop'
+alias dev='gc dev'
+alias master='gc master'
+alias fpull='dev && pull && master && pull'
+alias fpush='dev && push && master && push'
+
+alias gf='git flow'
+alias hotfix='gf hotfix'
+alias feature='gf feature'
+alias release='gf release'
+alias hstart='hotfix start'
+alias hpublish='hotfix publish'
+alias hfinish='hotfix finish -n'
+alias rstart='release start'
+alias rpublish='release publish'
+alias rfinish='release finish -n'
+alias fstart='feature start'
+alias fpublish='feature publish'
+alias ffinish='feature finish'
+
+alias tagas='~/work/whatagraph/scripts/tagas.sh'
+
+#####################
+### API WORKSPACE ###
+#####################
+alias a='php artisan'
+alias acleanup='rm -rf bootstrap/cache/*; rm -f storage/logs/*; a clear-compiled; a route:clear; a view:clear; a cache:clear'
+alias rebuild='acleanup && composer install && a migrate && a outsource:in && a outsource:re && a outsource:di && a outsource:me && a migrate:initw --confirm'
+alias horizon-clear='a horizon:clear && a horizon:clear --queue=screenshot && a horizon:clear --queue=email && a horizon:clear --queue=image_cache && a horizon:clear --queue=instagram_stories && a horizon:clear --queue=segment && a horizon:clear --queue=prefetch_report && a horizon:clear --queue=generate_pdf'
+
+function whatupdate() {
+   changed=0
+   cd /Users/phillip/Work/whatagraph/whatagraph-ui
+   git checkout master
+   git fetch
+   git status -uno | grep -q 'Your branch is behind' && changed=1
+   if [ $changed = 1 ]; then
+      git pull --ff-only
+      git reset --hard
+      yarn install
+      yarn build
+   fi
+   cd /Users/phillip/Work/whatagraph/whatagraph 
+   git fetch
+   git restore .
+   git checkout demo
+   git pull --ff-only
+   git checkout staging
+   git pull --ff-only
+   git checkout dev
+   changed=0 && git status -uno | grep -q 'Your branch is behind' && changed=1
+   if [ $changed = 1 ]; then
+      git pull --ff-only
+      composer install
+      php artisan migrate
+   fi
+   git checkout feature/twitter-unified-architecture
+}
+
+function gfcomplete() {
+   BRANCH=$(git branch --show-current)
+
+   if  [[ $BRANCH == "feature/"* ]] ;
+   then
+      echo "Deploying " . $BRANCH
+   fi
+
+   if  [[ $BRANCH == "hotfix/"* ]] ;
+   then
+      echo "Deploying " . $BRANCH
+      hfinish && fpush && rstart $BRANCH && rfinish && fpush && tagas patch
+   fi
+}

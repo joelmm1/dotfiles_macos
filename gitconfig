@@ -2,8 +2,10 @@
 [user]
 # Please adapt and uncomment the following lines:
 	name = Phillip Mwaniki
-	email = 2037708+PhillipMwaniki@users.noreply.github.com
+	email = codezeroprivate@gmail.com
 [core]
-	excludesfile = /Users/phillipnzuli/.gitignore_global
+	excludesfile = /Users/phillip/.gitignore_global
 [init]
 	defaultBranch = master
+[pull]
+	rebase = true
