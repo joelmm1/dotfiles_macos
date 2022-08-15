@@ -1,6 +1,11 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-
+# Pyenv initialization
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/$USER/.oh-my-zsh"
 
@@ -24,7 +29,7 @@ alias cat=bat
 
 export PATH="$HOME/.symfony/bin:$PATH"
 export PATH=~/.npm-global/bin:$PATH
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-15.0.1.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_333.jdk/Contents/Home
 export PATH=$JAVA_HOME:$PATH
 export PKG_CONFIG_PATH="/usr/local/opt/icu4c/lib/pkgconfig"
 export PATH=/usr/local/mysql/bin:$PATH
@@ -53,7 +58,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-plugins=(git laravel colored-man-pages zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git laravel colored-man-pages zsh-autosuggestions zsh-syntax-highlighting web-search)
 
 source $ZSH/oh-my-zsh.sh
 source $PHIL/.aliases
@@ -81,3 +86,11 @@ export LANG=en_US.UTF-8
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 export PATH="/usr/local/sbin:$PATH"
+
+export PATH="/usr/local/opt/openssl@3/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/readline/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib"
+
+export PATH="/Applications/Postgres.app/Contents/Versions/14/bin:$PATH"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"

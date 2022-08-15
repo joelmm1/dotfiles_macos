@@ -1,4 +1,4 @@
-alias 'cc'='cd ~/Documents/Code/'
+alias 'cc'='cd ~/Code/'
 alias ls='exa -laFh --git'
 alias ll='exa -laFh --git'
 alias 'wk'='cd ~/Work'
@@ -17,10 +17,13 @@ alias zshconfig="vim ~/.zshrc"
 alias src="source ~/.zshrc"
 alias cx="clear"
 alias rr="reset"
+alias pn=pnpm
 alias phpini="/usr/local/etc/php/7.4/php.ini"
 alias vhost="sudo vim httpd-vhosts.conf"
 alias sites="cd ~/Sites"
 alias checkport="lsof -i -P | grep LISTEN | grep "
+alias google="web_search google"
+alias a64="arch -x86_64"
 
 #Redis
 alias credis="redis-cli FLUSHALL"
@@ -128,3 +131,5 @@ function gfcomplete() {
       hfinish && fpush && rstart $BRANCH && rfinish && fpush && tagas patch
    fi
 }
+
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"

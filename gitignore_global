@@ -18,3 +18,7 @@ dump.rdb
 *.o
 *.so
 .php-cs-fixer.cache
+
+#Laravel
+.env.testing
+.env
