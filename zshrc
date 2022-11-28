@@ -1,5 +1,5 @@
 # Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && . "$HOME/.fig/shell/zshrc.pre.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Pyenv initialization
@@ -48,6 +48,8 @@ export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
 # Add Redis.app binaries to path
 export PATH="/Users/$USER/development/redis-6.0.10/src:$PATH"
+# Apache JMeter
+export PATH="/Users/$USER/development/apache-jmeter-5.5/bin:$PATH"
 
 # Add mongoDB.app binaries to path
 export PATH="/Applications/MongoDB.app/Contents/Resources/Vendor/mongodb/bin:$PATH"
@@ -91,6 +93,7 @@ export PATH="/usr/local/opt/openssl@3/bin:$PATH"
 export LDFLAGS="-L/usr/local/opt/readline/lib -L/usr/local/opt/openssl@1.1/lib -L/usr/local/opt/zlib/lib"
 
 export PATH="/Applications/Postgres.app/Contents/Versions/14/bin:$PATH"
+export PATH="$PATH:/Users/phillip/.dotnet/tools"
 
 # Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && . "$HOME/.fig/shell/zshrc.post.zsh"
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
